@@ -37,8 +37,8 @@ jobs:
           cd $FOLDER
 
           # Setup the committers identity.
-          git config user.email "some-user@some-domain.com"
-          git config user.name "Some User"
+          git config user.email "kevins12@live.nl"
+          git config user.name "entitytiger"
 
           # Create a new feature branch for the changes.
           git checkout -b $BRANCH_NAME
