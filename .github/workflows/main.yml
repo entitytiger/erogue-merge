@@ -28,8 +28,7 @@ jobs:
 
           # Clone the remote repository and change working directory to the
           # folder it was cloned to.
-          git clone https://github.com/entitytiger/pokeemerald-rogue \
-            --depth=1 \
+          git clone https://github.com/entitytiger/pokeemerald-rogue 
             --branch=main \
             https://entitytiger:${{ secrets.ACCESS_TOKEN }}@github.com/$REPOSITORY \
             $FOLDER
