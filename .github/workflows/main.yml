@@ -22,23 +22,23 @@ jobs:
       - name: Send pull-request
         run: |
           LATEST_TAG=$(git describe --tags --always --abbrev=0)
-          REPOSITORY="entitytiger/pokeemerald-expansion"
+          REPOSITORY="entitytiger/pokeemerald-rogue"
           FOLDER="bin/$REPOSITORY"
-          BRANCH_NAME="expansion-kleeen"
+          BRANCH_NAME="chore-update-scripts-to-$LATEST_TAG"
 
           # Clone the remote repository and change working directory to the
           # folder it was cloned to.
           git clone \
             --depth=1 \
             --branch=main \
-            https://entitytiger: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@github.com/$REPOSITORY \
+            https://entitytiger:${{ secrets.ACCESS_TOKEN }}@github.com/$REPOSITORY \
             $FOLDER
 
           cd $FOLDER
 
           # Setup the committers identity.
-          git config user.email "kevins12@live.nl"
-          git config user.name "entitytiger"
+          git config user.email "some-user@some-domain.com"
+          git config user.name "Some User"
 
           # Create a new feature branch for the changes.
           git checkout -b $BRANCH_NAME
