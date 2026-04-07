@@ -22,13 +22,13 @@ jobs:
       - name: Send pull-request
         run: |
           LATEST_TAG=$(git describe --tags --always --abbrev=0)
-          REPOSITORY="entitytiger/pokeemerald-rogue"
+          REPOSITORY="entitytiger/erogue-merge"
           FOLDER="bin/$REPOSITORY"
           BRANCH_NAME="chore-update-scripts-to-$LATEST_TAG"
 
           # Clone the remote repository and change working directory to the
           # folder it was cloned to.
-          git clone \
+          git clone https://github.com/entitytiger/pokeemerald-rogue
             --depth=1 \
             --branch=main \
             https://entitytiger:${{ secrets.ACCESS_TOKEN }}@github.com/$REPOSITORY \
