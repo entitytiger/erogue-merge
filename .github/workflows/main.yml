@@ -31,7 +31,7 @@ jobs:
           git clone \
             --depth=1 \
             --branch=main \
-            https://entitytiger:${{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}}@github.com/$REPOSITORY \
+            https://entitytiger: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@github.com/$REPOSITORY \
             $FOLDER
 
           cd $FOLDER
